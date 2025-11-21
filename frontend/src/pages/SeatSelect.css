@@ -1,0 +1,303 @@
+:root {
+  --card-bg: #ffffff;
+  --page-bg: #f3f6f8;
+  --accent: #10b981;
+  --accent-2: #2563eb;
+  --muted: #9ca3af;
+  --female: #ec4899;
+  --male: #3b82f6;
+}
+
+.seat-container {
+  background: var(--page-bg);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* === Deck Layout === */
+.deck-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: nowrap; /* ✅ ensures both decks stay side-by-side */
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.deck {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 22px;
+  width: 460px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+  flex-shrink: 0;
+}
+
+.deck-header h2 {
+  font-size: 20px;
+}
+
+.deck-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.deck-side.single {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 80px;
+  align-items: center;
+}
+
+.deck-side.right-columns {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.double-column {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+}
+
+.aisle {
+  width: 40px;
+}
+
+/* === Seat Stack Layout === */
+.seat-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.seat-number {
+  font-size: 13px;
+  font-weight: 600;
+  color: #065f46;
+}
+
+.sleeper {
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  background: #ecfdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 48px;
+  height: 84px;
+}
+
+.bed-vertical {
+  width: 36px;
+  height: 64px;
+  border-radius: 6px;
+  background: #a7f3d0;
+}
+
+.price-tag {
+  font-size: 12px;
+  font-weight: 500;
+  color: #166534;
+}
+
+/* === States === */
+.sleeper.booked {
+  border-color: #c7c7cc;
+  background: #f7f7f8;
+}
+
+.sleeper.selected {
+  border-color: #3b82f6;
+  background: #dbeafe;
+}
+
+.sold {
+  position: absolute;
+  bottom: 6px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* === Book Button === */
+.book-btn {
+  margin-top: 18px;
+  padding: 10px 28px;
+  border: none;
+  border-radius: 28px;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+
+.book-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* === Seat Info === */
+.seat-info {
+  margin-top: 40px;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.seat-info h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.seat-info table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.seat-info th,
+.seat-info td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #374151;
+}
+
+.seat-demo {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 2px solid #10b981;
+  margin: 0 auto;
+}
+
+.seat-demo.seater {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+.seat-demo.available {
+  background: #ecfdf5;
+  border-color: #10b981;
+}
+
+.seat-demo.booked {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.seat-demo.selected {
+  background: #047857;
+  border-color: #047857;
+}
+
+.seat-demo.male {
+  border-color: var(--male);
+}
+
+.seat-demo.female {
+  border-color: var(--female);
+}
+
+/* === Footer === */
+footer {
+  margin-top: 28px;
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Responsive Fix */
+@media (max-width: 960px) {
+  .deck-section {
+    flex-wrap: wrap; /* On smaller screens, stack vertically */
+  }
+
+  .deck {
+    width: 90%;
+  }
+}
+
+/* ===== Popup Overlay ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Popup Card */
+.popup-card {
+  background: white;
+  padding: 25px 30px;
+  width: 320px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.popup-card h3 {
+  margin-bottom: 10px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.yes-btn {
+  padding: 8px 20px;
+  background: #10b981;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.no-btn {
+  padding: 8px 20px;
+  background: #ef4444;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.yes-btn:hover,
+.no-btn:hover {
+  transform: scale(1.05);
+}

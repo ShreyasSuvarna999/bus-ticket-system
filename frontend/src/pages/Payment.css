@@ -1,0 +1,60 @@
+.payment-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #3b82f6, #10b981);
+  font-family: Poppins, sans-serif;
+}
+
+.payment-card {
+  background: white;
+  padding: 30px;
+  width: 380px;
+  border-radius: 18px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.payment-card h2 {
+  margin-bottom: 20px;
+}
+
+.info {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.pay-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.pay-input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #2563eb, #10b981);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  transform: scale(1.03);
+}
+
+.msg {
+  margin-top: 12px;
+  font-weight: bold;
+}

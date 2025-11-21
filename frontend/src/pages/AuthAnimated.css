@@ -1,0 +1,167 @@
+/* === Modern Sliding Auth UI (Premium Motion) === */
+.auth-wrapper {
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* === Auth Card === */
+.auth-container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  width: 850px;
+  max-width: 90%;
+  min-height: 500px;
+  transition: all 1.8s cubic-bezier(0.77, 0, 0.175, 1); /* 🌀 Elastic-like smooth motion */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* === Form Containers === */
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  transition: all 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* 🎯 spring/bounce easing */
+}
+
+.sign-up-container {
+  opacity: 0;
+  z-index: 1;
+}
+
+.sign-in-container {
+  z-index: 2;
+}
+
+/* === Overlay === */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 100;
+}
+
+.overlay {
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transition: transform 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* === Animated States === */
+.auth-container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.auth-container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.auth-container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.auth-container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.auth-container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+/* === Buttons === */
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 10px 30px;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, background 0.5s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+}
+
+button.ghost {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* === Inputs === */
+input {
+  background: #f6f6f6;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* === Typography === */
+h2, h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.9;
+}

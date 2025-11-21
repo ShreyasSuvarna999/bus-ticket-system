@@ -1,0 +1,59 @@
+.ticket-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #3b82f6, #10b981);
+  font-family: Poppins, sans-serif;
+}
+
+.ticket-card {
+  background: white;
+  padding: 30px;
+  width: 420px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.ticket-card h2 {
+  margin-bottom: 20px;
+}
+
+.ticket-card p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.download-btn {
+  background: linear-gradient(90deg, #2563eb, #10b981);
+  width: 100%;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.download-btn:hover {
+  transform: scale(1.03);
+}
+
+.logout-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff5f6d, #ff9966);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.logout-btn:hover {
+  transform: scale(1.03);
+}

@@ -1,0 +1,100 @@
+/* ========== Modern Auth Page ========== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+  font-family: 'Poppins', sans-serif;
+}
+
+.auth-card {
+  display: flex;
+  width: 850px;
+  height: 500px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+/* ===== Left Form Side ===== */
+.auth-form {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.auth-form button {
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.auth-form button:hover {
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+}
+
+/* ===== Right Info Panel ===== */
+.auth-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.auth-panel h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.auth-panel p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.auth-panel a {
+  background: white;
+  color: #10b981;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.auth-panel a:hover {
+  background: #f9fafb;
+  color: #3b82f6;
+}
